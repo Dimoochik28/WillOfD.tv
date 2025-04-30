@@ -44,35 +44,47 @@
     </header>
     <div>
       <div class="search-menu">
+        <div class="profile">
+          <a href="#" target="_blank">
+            <img
+              src="Images/profile-icon.png"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+        </div>
         <div class="search-box">
           <input type="text" placeholder="Пошук аніме..." id="searchInput" />
           <button id="searchBtn">Пошук</button>
+        </div>
+        <div class="icons">
+          <a href="https://www.instagram.com/vojchuk_dmitro/" target="_blank">
+            <img
+              src="Images/instagram-icon.png"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+
+          <a href="https://www.youtube.com/@Will0fD.tvadds/" target="_blank">
+            <img
+              src="Images/youtube-icon.png"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
         </div>
       </div>
       <div class="content">
         <div class="main-panel">
           <h1 class="title" id="anime-title"></h1>
           <h2 class="title" id="anime-description"></h2>
-          <div class="episodes" id="episode-list"></div>
-          <div>
-            <h2 class="title">Випадковий диявольський фрукт</h2>
-            <div class="card">
-              <img
-                class="devil-fruits"
-                src="Images/GomuGomuNoMi.png"
-                alt="Фрукт Гому Гому"
-              />
-              <h3>Фрукт Гому Гому но Мі</h3>
-              <p>
-                Диявольський фрукт типу Парамеція, який надає його користувачеві
-                гумове тіло, роблячи його гнучким, розтяжним і стійким до ударів
-                та куль. Він також повністю імунний до електрики. Фрукт їв Монкі
-                Д. Луффі, який використовує його для створення потужних
-                розтяжних атак. Спочатку він здавався звичайним, але згодом
-                розкрив унікальні можливості, які зробили його одним із
-                найнебезпечніших фруктів у світі One Piece.
-              </p>
-            </div>
+          <div class="episodes" id="episode-list">
+            <template id="episode-template">
+              <button class="episode-button">
+                Episode <span class="episode-number"></span>
+              </button>
+            </template>
           </div>
         </div>
         <div class="sidebar">
@@ -111,15 +123,20 @@
               <span>Naruto</span>
             </div>
           </div>
+          <div>
+            <h4 class="title-white">Випадковий диявольський фрукт</h4>
+            <div class="card">
+              <img
+                class="devil-fruits"
+                src="Images/GomuGomuNoMi.png"
+                alt="Фрукт Гому Гому"
+              />
+              <h4>Фрукт Гому Гому но Мі</h4>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <template id="episode-template">
-      <button class="episode-button">
-        Episode <span class="episode-number"></span>
-      </button>
-    </template>
 
     <script src="data/episods.js"></script>
     <script src="components/layout.js"></script>
