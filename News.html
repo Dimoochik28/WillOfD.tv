@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Новинки</title>
+    <title>Document</title>
     <link rel="stylesheet" href="Main_Page.css" />
-    <link rel="stylesheet" href="Search.js" />
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
   </head>
   <body class="fon">
@@ -45,38 +44,50 @@
     </header>
     <div>
       <div class="search-menu">
+        <div class="profile">
+          <a href="#" target="_blank">
+            <img
+              src="Images/profile-icon.png"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+        </div>
         <div class="search-box">
           <input type="text" placeholder="Пошук аніме..." id="searchInput" />
           <button id="searchBtn">Пошук</button>
         </div>
+        <div class="icons">
+          <a href="https://www.instagram.com/vojchuk_dmitro/" target="_blank">
+            <img
+              src="Images/instagram-icon.png"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+
+          <a href="https://www.youtube.com/@Will0fD.tvadds/" target="_blank">
+            <img
+              src="Images/youtube-icon.png"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+        </div>
       </div>
       <div class="content">
         <div class="main-panel">
-          <div class="video-container">
-            <video width="640" height="360" controls>
-              <source src="Video/One_Piece_793.mp4" type="video/mp4" />
-              Ваш браузер не підтримує відео.
-            </video>
-          </div>
-          <div>
-            <h2 class="title">Випадковий диявольський фрукт</h2>
-            <div class="card">
+          <h1 class="title">Новинки</h1>
+          <div class="card">
+            <a href="anime_episods.html?key=sololeveling">
               <img
-                class="devil-fruits"
-                src="Images/GomuGomuNoMi.png"
-                alt="Фрукт Гому Гому"
+                class="logo-of-anime"
+                src="Images/logo_solo_leveling.jpg"
+                alt=""
               />
-              <h3>Фрукт Гому Гому но Мі</h3>
-              <p>
-                Диявольський фрукт типу Парамеція, який надає його користувачеві
-                гумове тіло, роблячи його гнучким, розтяжним і стійким до ударів
-                та куль. Він також повністю імунний до електрики. Фрукт їв Монкі
-                Д. Луффі, який використовує його для створення потужних
-                розтяжних атак. Спочатку він здавався звичайним, але згодом
-                розкрив унікальні можливості, які зробили його одним із
-                найнебезпечніших фруктів у світі One Piece.
-              </p>
-            </div>
+              <h3>Solo Leveling</h3>
+              <p></p>
+            </a>
           </div>
         </div>
         <div class="sidebar">
@@ -115,8 +126,20 @@
               <span>Naruto</span>
             </div>
           </div>
+          <div>
+            <h4 class="title-white">Випадковий диявольський фрукт</h4>
+            <div class="card">
+              <img
+                class="devil-fruits"
+                src="Images/GomuGomuNoMi.png"
+                alt="Фрукт Гому Гому"
+              />
+              <h4>Фрукт Гому Гому но Мі</h4>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <script src="Search.js" defer></script>
   </body>
 </html>
