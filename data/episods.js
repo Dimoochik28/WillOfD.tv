@@ -25,32 +25,83 @@ window.animeData = {
   },
   boruto: {
     title: "Boruto",
-    episodes: 293,
     description: "Продовження історії про ніндзя",
+    seasons: [
+      {
+        seasonTitle: "",
+        episodes: 239,
+      },
+    ],
   },
   bleach: {
     title: "Bleach",
-    episodes: 366,
     description: "Історія про потойбічний світ",
+    seasons: [
+      {
+        seasonTitle: "",
+        episodes: 366,
+      },
+    ],
   },
   blackclover: {
     title: "Black Clover",
-    episodes: 170,
     description: "Пригоди хлопчика без магії в світі магії",
+    seasons: [
+      {
+        seasonTitle: "",
+        episodes: 170,
+      },
+    ],
   },
   drstone: {
     title: "Dr.Stone",
-    episodes: 70,
     description: "Наука в кам'яному віці?",
+    seasons: [
+      {
+        seasonTitle: "",
+        episodes: 24,
+      },
+
+      {
+        seasonTitle: "",
+        episodes: 12,
+      },
+      {
+        seasonTitle: "",
+        episodes: 22,
+      },
+      {
+        seasonTitle: "",
+        episodes: 12,
+      },
+    ],
   },
   vanitasnokarte: {
     title: "Vanitas no Karte",
-    episodes: 24,
     description: "Історія про вампірів",
+    seasons: [
+      {
+        seasonTitle: "",
+        episodes: 12,
+      },
+      {
+        seasonTitle: "",
+        episodes: 12,
+      },
+    ],
   },
   sololeveling: {
     title: "Solo Leveling",
-    episodes: 25,
     description: "Найслабший стає найсильнішим?",
+    seasons: [
+      {
+        seasonTitle: "",
+        episodes: 12,
+      },
+      {
+        seasonTitle: "",
+        episodes: 13,
+      },
+    ],
   },
 };
