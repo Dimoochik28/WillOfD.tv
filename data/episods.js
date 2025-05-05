@@ -2,6 +2,7 @@ window.animeData = {
   onepiece: {
     title: "One Piece",
     description: "Пригоди піратів у пошуках One Piece.",
+    cover: "Images/logo_one_piece",
     seasons: [
       {
         seasonTitle: "",
@@ -12,13 +13,14 @@ window.animeData = {
   naruto: {
     title: "Naruto",
     description: "Історія про ніндзя",
+    cover: "Images/logo_naruto.jpg",
     seasons: [
       {
-        seasonTitle: "Сезон 1",
+        seasonTitle: "",
         episodes: 220,
       },
       {
-        seasonTitle: "Сезон 2",
+        seasonTitle: "",
         episodes: 500,
       },
     ],
@@ -26,6 +28,7 @@ window.animeData = {
   boruto: {
     title: "Boruto",
     description: "Продовження історії про ніндзя",
+    cover: "Images/logo_boruto.jpg",
     seasons: [
       {
         seasonTitle: "",
@@ -36,6 +39,7 @@ window.animeData = {
   bleach: {
     title: "Bleach",
     description: "Історія про потойбічний світ",
+    cover: "Images/logo_bleach.webp",
     seasons: [
       {
         seasonTitle: "",
@@ -46,6 +50,7 @@ window.animeData = {
   blackclover: {
     title: "Black Clover",
     description: "Пригоди хлопчика без магії в світі магії",
+    cover: "Images/logo_black_clover.jpg",
     seasons: [
       {
         seasonTitle: "",
@@ -56,6 +61,7 @@ window.animeData = {
   drstone: {
     title: "Dr.Stone",
     description: "Наука в кам'яному віці?",
+    cover: "Images/logo_dr.Stone.jpg",
     seasons: [
       {
         seasonTitle: "",
@@ -79,6 +85,7 @@ window.animeData = {
   vanitasnokarte: {
     title: "Vanitas no Karte",
     description: "Історія про вампірів",
+    cover: "Images/logo_memuars_of_vanitase.png",
     seasons: [
       {
         seasonTitle: "",
@@ -93,6 +100,7 @@ window.animeData = {
   sololeveling: {
     title: "Solo Leveling",
     description: "Найслабший стає найсильнішим?",
+    cover: "Images/logo_solo_leveling.jpg",
     seasons: [
       {
         seasonTitle: "",
