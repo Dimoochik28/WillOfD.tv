@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="Main_Page.css" />
+    <link rel="stylesheet" href="episode.css" />
     <link rel="stylesheet" href="Search.js" />
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
   </head>
@@ -62,7 +62,7 @@
           <a href="https://www.instagram.com/vojchuk_dmitro/" target="_blank">
             <img
               src="Images/instagram-icon.png"
-              alt="Instagram"
+              alt="YouTube"
               style="width: 30px"
             />
           </a>
@@ -76,66 +76,41 @@
           </a>
         </div>
       </div>
-      <div class="content">
-        <div class="main-panel">
-          <h2 class="title">Невдовзі серії будуть добавлені на наш сайт</h2>
-          <div class="video-container">
-            <video id="anime-video" controls>
-              <source id="video-source" src="" type="video/mp4" />
-              Ваш браузер не підтримує відео.
-            </video>
+      <div class="container">
+        <div class="episode-header">
+          <a id="anime-cover-link" href="#">
+            <img id="anime-cover" class="anime-cover" alt="Anime Cover" />
+          </a>
+          <div class="anime-details">
+            <h2 id="anime-title" class="anime-title"></h2>
+            <h2 id="episode-number" class="anime-title"></h2>
           </div>
         </div>
-        <div class="sidebar">
-          <h3>Останні переглянуті</h3>
-          <ul class="sidebar-list">
-            <li>One Piece</li>
-            <li>Naruto</li>
-            <li>Bleach</li>
-          </ul>
-          <h3>Жанри</h3>
-          <ul class="sidebar-list">
-            <li><a href="#">Бойовик</a></li>
-            <li><a href="#">Фентезі</a></li>
-            <li><a href="#">Пригоди</a></li>
-            <li><a href="#">Романтика</a></li>
-            <li><a href="#">Ісєкай</a></li>
-            <li><a href="#">Комедія</a></li>
-            <li><a href="#">Повсякденність</a></li>
-            <li><a href="#">Драма</a></li>
-            <li><a href="#">Фантастика</a></li>
-            <li><a href="#">Містика</a></li>
-            <li><a href="#">Детектив</a></li>
-            <li><a href="#">Триллер</a></li>
-            <li><a href="#">Психологія</a></li>
-          </ul>
-          <h3>Топ популярних</h3>
-          <div class="top-anime">
-            <div class="anime-item">
-              <img src="Images/logo_one_piece" />
-              <span>One Piece</span>
+        <div class="content">
+          <div class="main-panel">
+            <h2 class="title">Невдовзі серії будуть добавлені на наш сайт</h2>
+            <div class="video-container">
+              <video id="anime-video" controls>
+                <source id="video-source" src="" type="video/mp4" />
+                Ваш браузер не підтримує відео.
+              </video>
             </div>
-          </div>
-          <div class="top-anime">
-            <div class="anime-item">
-              <img src="Images/logo_naruto.jpg" />
-              <span>Naruto</span>
-            </div>
-          </div>
-          <div>
-            <h4 class="title-white">Випадковий диявольський фрукт</h4>
-            <div class="card">
-              <img
-                class="devil-fruits"
-                src="Images/GomuGomuNoMi.png"
-                alt="Фрукт Гому Гому"
-              />
-              <h4>Фрукт Гому Гому но Мі</h4>
+            <div class="buttons">
+              <button class="episode-button-next" id="prev-episode">
+                ⬅️ Попередня серія
+              </button>
+              <button class="episode-button-next" id="all-episodes">
+                📋 Всі серії
+              </button>
+              <button class="episode-button-next" id="next-episode">
+                ➡️ Наступна серія
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
     <script src="components/video_episode.js"></script>
+    <script src="data/episods.js"></script>
   </body>
 </html>

@@ -1,21 +1,23 @@
-/* === Основні стилі === */
+/* Загальні стилі для всього документа */
 body {
   margin: 0;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
 }
 
+/* Вилучення стандартних стилів списків */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+/* Стилі для посилань без підкреслення і з наслідуванням кольору */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* === Фонове зображення сторінки === */
+/* Фонове зображення всієї сторінки */
 .fon {
   background-image: url("Images/luffy_vs_doflamingo_gear_4th_by_yusuf911_d9nw480.jpg");
   background-size: cover;
@@ -25,7 +27,7 @@ a {
   height: 100vh;
 }
 
-/* === Верхнє меню === */
+/* Верхнє меню (навігаційна панель) */
 .top-line {
   background: linear-gradient(to bottom, #2e034e, #57088f);
   display: flex;
@@ -37,6 +39,7 @@ a {
   z-index: 1;
 }
 
+/* Список пунктів у верхньому меню */
 .top-line-list {
   display: flex;
   gap: 32px;
@@ -45,16 +48,19 @@ a {
   color: #e0e0e0;
 }
 
+/* Посилання у верхньому меню */
 .top-line-list-link {
   position: relative;
   font-size: 20px;
   transition: all 1s ease;
 }
 
+/* Ефект при наведенні на пункт меню */
 .top-line-list-link:hover {
   color: #ff7f00;
 }
 
+/* Анімація підкреслення під час ховеру */
 .top-line-list-link::after {
   content: "";
   position: absolute;
@@ -71,19 +77,20 @@ a {
   transform: scaleX(1);
 }
 
-/* === Перемикач теми (світла/темна) === */
+/* Блок перемикача теми (світла/темна) */
 .light-or-dark {
   display: flex;
   align-items: center;
 }
 
+/* Іконка теми */
 .light-or-dark-img {
   height: 60px;
   width: 60px;
   padding: 8px 0;
 }
 
-/* === Логотип сайту === */
+/* Логотип */
 .logo {
   padding-top: 20px;
 }
@@ -95,7 +102,7 @@ a {
   transform: translateX(-50%) scale(0.7);
 }
 
-/* === Пошукова панель === */
+/* Пошукова панель із профілем, пошуком та іконками */
 .search-menu {
   background: linear-gradient(
     to right,
@@ -116,7 +123,7 @@ a {
   z-index: 1;
 }
 
-/* === Блоки всередині пошуку === */
+/* Частини пошукової панелі: профіль, інпут пошуку, іконки */
 .profile,
 .search-box,
 .icons {
@@ -124,12 +131,14 @@ a {
   text-align: center;
 }
 
+/* Блок профілю користувача */
 .profile {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Пошукове поле */
 .search-box {
   display: flex;
   align-items: center;
@@ -138,6 +147,7 @@ a {
   margin: 0 auto;
 }
 
+/* Інпут пошуку */
 .search-box input {
   padding: 8px;
   width: 200px;
@@ -145,6 +155,7 @@ a {
   border-radius: 5px;
 }
 
+/* Кнопка пошуку */
 .search-box button {
   background-color: #ff7f00;
   color: white;
@@ -154,10 +165,12 @@ a {
   cursor: pointer;
 }
 
+/* Ховер кнопки пошуку */
 .search-box button:hover {
   background-color: #e36c00;
 }
 
+/* Іконки користувача або додаткові опції */
 .icons {
   display: flex;
   align-items: center;
@@ -165,11 +178,8 @@ a {
   gap: 10px;
 }
 
-/* === Основний контент === */
-.content,
+/* Основний контейнер сайту */
 .container {
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   z-index: 1;
   background: linear-gradient(
@@ -186,28 +196,81 @@ a {
   color: #e0e0e0;
 }
 
-.container {
+/* Хедер блоку серії: картинка + назва + номер епізоду */
+.episode-header {
+  margin: 20px 250px 20px 250px;
+  padding: 20px;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #ffffff;
+  gap: 20px;
+  background-color: #ff7f00;
+  border-radius: 80px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Картинка аніме */
+.anime-cover {
+  flex: 1;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* Контейнер з назвою та номером епізоду */
+.anime-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Назва аніме */
+.anime-title {
+  flex: 2;
+}
+
+/* Основна частина контенту */
+.content {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-/* === Блок з відео === */
+/* Панель з вмістом */
+.main-panel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Блок із відео */
 .video-container {
-  margin: 80px 120px 120px 120px;
+  border-radius: 40px;
+  border: 1px solid #ff7f00;
+  margin: 0px 200px 0px 200px;
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   max-width: none;
 }
 
+/* Сам плеєр відео */
 #anime-video {
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 10px;
+  border-radius: 40px;
 }
 
-/* === Заголовки === */
+/* Заголовок */
 .title {
   width: 100%;
   text-align: center;
@@ -216,100 +279,10 @@ a {
   display: block;
 }
 
-.title-white {
-  width: 100%;
-  text-align: center;
-  margin: 10px auto;
-  display: block;
-}
-
-/* === Зображення фруктів === */
-.devil-fruits {
-  max-width: 100%;
-  height: 120px;
-  border-radius: 10px;
-}
-
-/* === Логотипи аніме === */
-.logo-of-anime {
-  border-radius: 20%;
-  height: 200px;
-  width: auto;
-}
-
-/* === Контейнер з аніме та картками === */
-.main-panel {
-  flex: 1;
-  min-width: 0;
-  padding: 20px;
-}
-
-.cards {
-  padding: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* === Бокова панель (sidebar) === */
-.sidebar {
-  width: 25%;
-  background-color: rgba(255, 102, 0, 0.8);
-  padding: 20px;
-  border-radius: 30px;
-  box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  max-width: 250px;
-}
-
-.sidebar h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.sidebar-list {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-list li {
-  margin: 6px 0;
-}
-
-.sidebar-list a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.sidebar-list a:hover {
-  color: #ff0;
-}
-
-/* === Популярне аніме (Top Anime Sidebar) === */
-.top-anime {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.anime-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.anime-item img {
-  width: 60px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* === Кнопки епізодів === */
-.episode-button {
+/* Кнопки попередньої та наступної серії */
+.episode-button-previous,
+.episode-button-next {
+  max-height: 40px;
   background-color: #ff8000;
   color: #fff;
   padding: 10px 16px;
@@ -319,36 +292,26 @@ a {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  border: 2px solid #e0e0e0;
+  border: 1px solid #e0e0e0;
 }
 
-.episode-button:hover {
+/* Ефект ховеру на кнопках */
+.episode-button-previous:hover,
+.episode-button-next:hover {
   color: rgba(50, 7, 83);
   background-color: #fea54c;
 }
 
-.episode-button:active {
+/* Ефект кліку на кнопках */
+.episode-button-previous:active,
+.episode-button-next:active {
   transform: scale(0.97);
 }
 
-/* === Контейнер для кнопок === */
+/* Обгортка для кнопок, вирівнювання */
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* === Картки з аніме === */
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(154, 35, 181, 0.447);
-  border-radius: 15px;
-  padding: 20px;
-  max-width: 200px;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ff7f00;
+  gap: 140px;
 }
