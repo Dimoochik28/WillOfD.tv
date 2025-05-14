@@ -256,7 +256,7 @@ a {
 }
 
 .episode-button:active {
-  transform: scale(100);
+  transform: scale(0.97);
 }
 .devil-fruits {
   max-width: 100%;
