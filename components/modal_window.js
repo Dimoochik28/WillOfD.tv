@@ -20,38 +20,3 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
-
-// ==== ОБРОБКА РЕЄСТРАЦІЇ ====
-document
-  .getElementById("registration-form")
-  .addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-    const username = formData.get("username");
-    const email = formData.get("email");
-    const password = formData.get("password");
-
-    try {
-      const response = await fetch("/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, email, password }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        alert("Реєстрація успішна!");
-        modal.style.display = "none";
-        this.reset(); // Очистити форму
-      } else {
-        alert("Помилка: " + result.message);
-      }
-    } catch (error) {
-      alert("Помилка підключення до сервера");
-      console.error(error);
-    }
-  });
