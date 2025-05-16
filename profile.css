@@ -166,7 +166,6 @@ a {
 }
 .content {
   display: flex;
-  flex-wrap: wrap;
   position: relative;
   z-index: 1;
   background: linear-gradient(
@@ -181,6 +180,11 @@ a {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   border: 1px solid #ff7f00;
   color: #e0e0e0;
+}
+
+.main-panel {
+  flex: 1;
+  min-width: 0;
 }
 
 /* === Заголовки === */
@@ -204,12 +208,6 @@ a {
   max-width: 100%;
   height: 120px;
   border-radius: 10px;
-}
-/* === Контейнер з аніме та картками === */
-.main-panel {
-  flex: 1;
-  min-width: 0;
-  padding: 20px;
 }
 
 .cards {
@@ -295,4 +293,73 @@ a {
   background-repeat: no-repeat; /* щоб не повторювалось */
   background-size: 100% 100%; /* або використай: background-size: cover; */
   background-position: center; /* для центрування */
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 10px;
+  height: 320px;
+  border: 1px solid #ff7f00;
+}
+.profile-img {
+  border-radius: 100px;
+  padding: 20px;
+  width: 200px;
+  height: 250px;
+}
+.registration-login {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  gap: 30px;
+}
+.button-login {
+  background-color: #ff8000;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  margin: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-login:hover {
+  color: rgba(50, 7, 83);
+  background-color: #fea54c;
+}
+
+.button-login:active {
+  transform: scale(0.97);
+}
+
+.modal {
+  display: none; /* Початково приховане */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* затемнення фону */
+}
+
+.modal-content {
+  background-color: rgba(154, 35, 181, 0.447);
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ff7f00;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }
