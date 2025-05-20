@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Серії</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/anime_episodes.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='Images/favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="fon">
+    <header>
+      <nav class="top-line">
+        <div class="light-or-dark">
+          <img
+            src="{{ url_for('static', filename='Images/YumiYumiNoMi.webp') }}"
+            alt="light-or-dark"
+            class="light-or-dark-img"
+          />
+        </div>
+        <div>
+          <ul class="top-line-list">
+            <li>
+              <a class="top-line-list-link" href="{{ url_for('news') }}"
+                >Новинки</a
+              >
+            </li>
+            <li>
+              <a class="top-line-list-link" href="{{ url_for('devil_fruits') }}"
+                >Devil Fruits</a
+              >
+            </li>
+            <li>
+              <a class="top-line-list-link" href="{{ url_for('anime') }}"
+                >Anime</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="logo">
+        <a class="logo-img" href="{{ url_for('main_page') }}">
+          <img
+            src="{{ url_for('static', filename='Images/Logo-fotor-bg-remover-20250219233252.png') }}"
+            alt="логотип"
+          />
+        </a>
+      </div>
+    </header>
+    <div>
+      <div class="search-menu">
+        <div class="profile">
+          <a href="{{ url_for('profile') }}">
+            <img
+              src="{{ url_for('static', filename='Images/profile-icon.png') }}"
+              alt="Profile"
+              style="width: 30px"
+            />
+          </a>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Пошук аніме..." id="searchInput" />
+          <button id="searchBtn">Пошук</button>
+        </div>
+        <div class="icons">
+          <a href="https://www.instagram.com/vojchuk_dmitro/" target="_blank">
+            <img
+              src="{{ url_for('static', filename='Images/instagram-icon.png') }}"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+
+          <a href="https://www.youtube.com/@Will0fD.tvadds/" target="_blank">
+            <img
+              src="{{ url_for('static', filename='Images/youtube-icon.png') }}"
+              alt="YouTube"
+              style="width: 30px"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="main-panel">
+          <div class="anime-inform">
+            <h1 class="title">{{ anime.title }}</h1>
+            <img
+              class="anime-cover"
+              src="{{ url_for('static', filename=anime.cover.replace('static/', '')) }}"
+              alt="{{ anime.title }}"
+            />
+            <p class="title">{{ anime.description }}</p>
+            <p class="title">Жанри: {{ anime.genres }}</p>
+          </div>
+          {% if anime.seasons %} {% for season in anime.seasons %}
+          <div class="episodes">
+            <h3>Сезон {{ season.season_number }}</h3>
+            <div class="episode-grid">
+              {% if season.episodes %} {% for episode in season.episodes %}
+              <form
+                method="get"
+                action="{{ url_for('view_episode', key=anime.key, season_number=season.season_number, episode_number=episode.episode_number) }}"
+              >
+                <button type="submit" class="episode-button">
+                  Episode
+                  <span class="episode-number"
+                    >{{ episode.episode_number }}</span
+                  >
+                </button>
+              </form>
+              {% endfor %} {% else %}
+              <p class="title">Серій ще немає.</p>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %} {% else %}
+          <p class="title">Сезонів ще немає.</p>
+          {% endif %}
+
+          <a class="back-button" href="{{ url_for('anime') }}">← Назад</a>
+          {% if g.user %}
+          <h3 class="title" id="rating-title">
+            {% if user_rating %} Ви оцінили на {{ user_rating }} / 5 {% else %}
+            Оцініть по 5-ти бальній шкалі {% endif %}
+          </h3>
+
+          <div
+            class="rating"
+            data-anime-id="{{ anime.id }}"
+            data-user-rating="{{ user_rating or 0 }}"
+          >
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+            {% if not user_rating %}
+            <button class="rating-button">Оцінити</button>
+            {% endif %}
+          </div>
+
+          <p class="title" id="rating-value">
+            {% if user_rating %} Оцінка: {{ user_rating }} {% else %} Оцінка: 0
+            {% endif %}
+          </p>
+          {% else %}
+          <p class="title">Увійдіть в обліковий запис, щоб оцінити.</p>
+          {% endif %}
+        </div>
+        <div class="sidebar">
+          <h3>Жанри</h3>
+          <ul class="sidebar-list">
+            <li><a href="#">Бойовик</a></li>
+            <li><a href="#">Фентезі</a></li>
+            <li><a href="#">Пригоди</a></li>
+            <li><a href="#">Романтика</a></li>
+            <li><a href="#">Ісєкай</a></li>
+            <li><a href="#">Комедія</a></li>
+            <li><a href="#">Повсякденність</a></li>
+            <li><a href="#">Драма</a></li>
+            <li><a href="#">Фантастика</a></li>
+            <li><a href="#">Містика</a></li>
+            <li><a href="#">Детектив</a></li>
+            <li><a href="#">Триллер</a></li>
+            <li><a href="#">Психологія</a></li>
+          </ul>
+          <h3>Топ популярних</h3>
+          <div class="top-anime">
+            <div class="anime-item">
+              <img
+                src="{{ url_for('static', filename='Images/logo_one_piece') }}"
+              />
+              <span>One Piece</span>
+            </div>
+          </div>
+          <div class="top-anime">
+            <div class="anime-item">
+              <img
+                src="{{ url_for('static', filename='Images/logo_naruto.jpg') }}"
+              />
+              <span>Naruto</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="title-white">Випадковий диявольський фрукт</h4>
+            <div class="card">
+              <img
+                class="devil-fruits"
+                src="{{ url_for('static', filename='Images/GomuGomuNoMi.png') }}"
+                alt="Фрукт Гому Гому"
+              />
+              <h4>Фрукт Гому Гому но Мі</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/anime_rating.js') }}"></script>
+  </body>
+</html>

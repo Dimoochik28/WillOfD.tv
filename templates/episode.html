@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title"></title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/episode.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='Images/favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="fon">
+    <header>
+      <nav class="top-line">
+        <div class="light-or-dark">
+          <img
+            src="{{ url_for('static', filename='Images/YumiYumiNoMi.webp') }}"
+            alt="light-or-dark"
+            class="light-or-dark-img"
+          />
+        </div>
+        <div>
+          <ul class="top-line-list">
+            <li>
+              <a class="top-line-list-link" href="{{ url_for('news') }}"
+                >Новинки</a
+              >
+            </li>
+            <li>
+              <a class="top-line-list-link" href="{{ url_for('devil_fruits') }}"
+                >Devil Fruits</a
+              >
+            </li>
+            <li>
+              <a class="top-line-list-link" href="{{ url_for('anime') }}"
+                >Anime</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="logo">
+        <a class="logo-img" href="{{ url_for('main_page') }}">
+          <img
+            src="{{ url_for('static', filename='Images/Logo-fotor-bg-remover-20250219233252.png') }}"
+            alt="логотип"
+          />
+        </a>
+      </div>
+    </header>
+    <div>
+      <div class="search-menu">
+        <div class="profile">
+          <a href="{{ url_for('profile')}}">
+            <img
+              src="{{ url_for('static', filename='Images/profile-icon.png') }}"
+              alt="Profile"
+              style="width: 30px"
+            />
+          </a>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Пошук аніме..." id="searchInput" />
+          <button id="searchBtn">Пошук</button>
+        </div>
+        <div class="icons">
+          <a href="https://www.instagram.com/vojchuk_dmitro/" target="_blank">
+            <img
+              src="{{ url_for('static', filename='Images/instagram-icon.png') }}"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+          <a href="https://www.youtube.com/@Will0fD.tvadds/" target="_blank">
+            <img
+              src="{{ url_for('static', filename='Images/youtube-icon.png') }}"
+              alt="YouTube"
+              style="width: 30px"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="episode-header">
+          <a href="{{ url_for('anime_episodes', key=anime.key) }}">
+            <img
+              class="anime-cover"
+              src="{{ url_for('static', filename=anime.cover.replace('static/', '')) }}"
+              alt="{{ anime.title }}"
+            />
+          </a>
+          <div class="anime-details">
+            <h2 class="anime-title">{{ anime.title }}</h2>
+            <h2 class="anime-title">
+              Сезон {{ season.season_number }} | Серія {{ episode.episode_number
+              }}
+            </h2>
+          </div>
+        </div>
+        <div class="content">
+          <div class="main-panel">
+            <h2 class="title">Невдовзі серії будуть добавлені на наш сайт</h2>
+            <div class="video-container">
+              <video class="anime-video" controls>
+                <source
+                  src="{{ url_for('static', filename=episode.video) }}"
+                  type="video/mp4"
+                />
+                Ваш браузер не підтримує відео.
+              </video>
+            </div>
+            <div class="buttons">
+              {% if episode.episode_number > 1 %}
+              <a
+                href="{{ url_for('view_episode', key=anime.key, season_number=season.season_number, episode_number=episode.episode_number - 1) }}"
+              >
+                <button class="episode-button-next">⬅️ Попередня</button>
+              </a>
+              {% endif %}
+
+              <a href="{{ url_for('anime_episodes', key=anime.key) }}">
+                <button class="episode-button-next">📋 Всі серії</button>
+              </a>
+
+              {% if season.episodes|length > episode.episode_number %}
+              <a
+                href="{{ url_for('view_episode', key=anime.key, season_number=season.season_number, episode_number=episode.episode_number + 1) }}"
+              >
+                <button class="episode-button-next">➡️ Наступна</button>
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='components/video_episode.js') }}"></script>
+    <script src="{{ url_for('static', filename='data/episods.js') }}"></script>
+  </body>
+</html>
