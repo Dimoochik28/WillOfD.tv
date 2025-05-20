@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title"></title>
+    <link rel="stylesheet" href="episode.css" />
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="fon">
+    <header>
+      <nav class="top-line">
+        <div class="light-or-dark">
+          <img
+            src="Images/YumiYumiNoMi.webp"
+            alt="light-or-dark"
+            class="light-or-dark-img"
+          />
+        </div>
+        <div>
+          <ul class="top-line-list">
+            <li>
+              <a class="top-line-list-link" href="News.html">Новинки</a>
+            </li>
+            <li>
+              <a class="top-line-list-link" href="Devil_Fruits.html"
+                >Devil Fruits</a
+              >
+            </li>
+            <li>
+              <a class="top-line-list-link" href="Anime.html">Anime</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="logo">
+        <a class="logo-img" href="Main_Page.html">
+          <img
+            src="Images/Logo-fotor-bg-remover-20250219233252.png"
+            alt="логотип"
+          />
+        </a>
+      </div>
+    </header>
+    <div>
+      <div class="search-menu">
+        <div class="profile">
+          <a href="profile.html">
+            <img
+              src="Images/profile-icon.png"
+              alt="Profile"
+              style="width: 30px"
+            />
+          </a>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Пошук аніме..." id="searchInput" />
+          <button id="searchBtn">Пошук</button>
+        </div>
+        <div class="icons">
+          <a href="https://www.instagram.com/vojchuk_dmitro/" target="_blank">
+            <img
+              src="Images/instagram-icon.png"
+              alt="Instagram"
+              style="width: 30px"
+            />
+          </a>
+
+          <a href="https://www.youtube.com/@Will0fD.tvadds/" target="_blank">
+            <img
+              src="Images/youtube-icon.png"
+              alt="YouTube"
+              style="width: 30px"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="episode-header">
+          <a id="anime-cover-link" href="#">
+            <img id="anime-cover" class="anime-cover" alt="Anime Cover" />
+          </a>
+          <div class="anime-details">
+            <h2 id="anime-title" class="anime-title"></h2>
+            <h2 id="episode-number" class="anime-title"></h2>
+          </div>
+        </div>
+        <div class="content">
+          <div class="main-panel">
+            <h2 class="title">Невдовзі серії будуть добавлені на наш сайт</h2>
+            <div class="video-container">
+              <video id="anime-video" controls>
+                <source id="video-source" src="" type="video/mp4" />
+                Ваш браузер не підтримує відео.
+              </video>
+            </div>
+            <div class="buttons">
+              <button class="episode-button-next" id="prev-episode">
+                ⬅️ Попередня серія
+              </button>
+              <button class="episode-button-next" id="all-episodes">
+                📋 Всі серії
+              </button>
+              <button class="episode-button-next" id="next-episode">
+                ➡️ Наступна серія
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="components/video_episode.js"></script>
+    <script src="data/episods.js"></script>
+  </body>
+</html>
