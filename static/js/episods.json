@@ -1,0 +1,144 @@
+{
+  "onepiece": {
+    "key": "onepiece",
+    "title": "One Piece",
+    "description": "Пригоди піратів у пошуках One Piece.",
+    "cover": "Images/logo_one_piece",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 1127,
+        "video": "Video/onepiece/onepiece_trailer.mp4"
+      }
+    ],
+    "genres": ["Action", "Adventure", "Fantasy"]
+  },
+  "naruto": {
+    "key": "naruto",
+    "title": "Naruto",
+    "description": "Історія про ніндзя",
+    "cover": "Images/logo_naruto.jpg",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 220,
+        "video": "Video/naruto/naruto_trailer.mp4"
+      },
+      {
+        "seasonTitle": "",
+        "episodes": 500,
+        "video": "Video/naruto/naruto_trailer.mp4"
+      }
+    ],
+    "genres": ["Action", "Adventure", "Shounen"]
+  },
+  "boruto": {
+    "key": "boruto",
+    "title": "Boruto",
+    "description": "Продовження історії про ніндзя",
+    "cover": "Images/logo_boruto.jpg",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 239,
+        "video": "Video/boruto/boruto_trailer.mp4"
+      }
+    ],
+    "genres": ["Action", "Adventure", "Shounen"]
+  },
+  "bleach": {
+    "key": "bleach",
+    "title": "Bleach",
+    "description": "Історія про потойбічний світ",
+    "cover": "Images/logo_bleach.webp",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 366,
+        "video": "Video/bleach/bleach_trailer.mp4"
+      }
+    ],
+    "genres": ["Action", "Supernatural", "Shounen"]
+  },
+  "blackclover": {
+    "key": "blackclover",
+    "title": "Black Clover",
+    "description": "Пригоди хлопчика без магії в світі магії",
+    "cover": "Images/logo_black_clover.jpg",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 170,
+        "video": "Video/blackclover/blackclover_trailer.mp4"
+      }
+    ],
+    "genres": ["Action", "Adventure", "Fantasy"]
+  },
+  "drstone": {
+    "key": "drstone",
+    "title": "Dr.Stone",
+    "description": "Наука в кам'яному віці?",
+    "cover": "Images/logo_dr.Stone.jpg",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 24,
+        "video": "Video/drstone/drstone_trailer.mp4"
+      },
+      {
+        "seasonTitle": "",
+        "episodes": 12,
+        "video": "Video/drstone/drstone_trailer.mp4"
+      },
+      {
+        "seasonTitle": "",
+        "episodes": 22,
+        "video": "Video/drstone/drstone_trailer.mp4"
+      },
+      {
+        "seasonTitle": "",
+        "episodes": 12,
+        "video": "Video/drstone/drstone_trailer.mp4"
+      }
+    ],
+    "genres": ["Adventure", "Sci-Fi", "Shounen"]
+  },
+  "vanitasnokarte": {
+    "key": "vanitasnokarte",
+    "title": "Vanitas no Karte",
+    "description": "Історія про вампірів",
+    "cover": "Images/logo_memuars_of_vanitase.png",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 12,
+        "video": "Video/vanitasnokarte/vanitasnokarte_trailer.mp4"
+      },
+      {
+        "seasonTitle": "",
+        "episodes": 12,
+        "video": "Video/vanitasnokarte/vanitasnokarte_trailer.mp4"
+      }
+    ],
+    "genres": ["Fantasy", "Supernatural", "Vampires"]
+  },
+  "sololeveling": {
+    "key": "sololeveling",
+    "title": "Solo Leveling",
+    "description": "Найслабший стає найсильнішим?",
+    "cover": "Images/logo_solo_leveling.jpg",
+    "seasons": [
+      {
+        "seasonTitle": "",
+        "episodes": 12,
+        "video": "Video/sololeveling/sololeveling_trailer.mp4"
+      },
+      {
+        "seasonTitle": "",
+        "episodes": 13,
+        "video": "Video/sololeveling/sololeveling_trailer.mp4"
+      }
+    ],
+    "genres": ["Action", "Fantasy", "Adventure"]
+  }
+}
